@@ -4,7 +4,8 @@ int suma;
 
 int sumador_normal(int a,int b){
 	suma=a+b;
-	return a+b;
+	printf("%i\n",suma );
+	return suma;
 }
 
 void sumador_puntero(int *a, int b){
@@ -28,7 +29,7 @@ int main(int argc, char const *argv[])
 	suma_normal = sumador_normal(var_normal,*var_puntero);
 	printf("%i\n", suma_normal);
 	sumador_puntero(var_puntero,var_normal);
-	printf("%i\n", suma);
+	printf("%i\n", *var_puntero);
 	free(var_puntero);
 	return 0;
 }
