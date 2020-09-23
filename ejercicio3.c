@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-//%i entero (int)
-//%c caracter (char)
-//%f real (float)
-//%s cadena caracteres (char *)
+//%i entero (int) &var
+//%c caracter (char) &var
+//%f real (float) &var
+//%s cadena caracteres (char *) var
 
 int main(){
 	int a;
