@@ -11,12 +11,13 @@ struct nombre{
 };
 typedef struct nombre estructura1;
 
-void sumatoria(int *numeros,int *resultado){
-	int largo = length(numeros);
+void sumatoria(int *numeros,int *largo,int *resultado){
+	//int largo = length(numeros);
 	int i;
 	*resultado=0;
-	for(i=0;i<largo;i++){
-		*resultado=*resultado+numeros[i];
+	for(i=0;i<*largo;i++){
+		*resultado=*resultado-numeros[i];
+
 	}
 }
 
@@ -24,6 +25,7 @@ int main(){
 	int *arreglo_enteros;
 	char *arreglo_caracteres;
 	int i;
+	int resultado;
 	estructura1 arreglo[10];
 	arreglo[0].variable_1=1;
 	arreglo[0].variable_n[0]=1;
@@ -45,6 +47,11 @@ int main(){
 		printf("%c-",arreglo_caracteres[i]);
 	}
 	printf("\b \n");
+
+	i=n;
+	sumatoria(arreglo_enteros,&i,&resultado);
+	printf("%i\n", resultado);
+
 	free(arreglo_enteros);
 	free(arreglo_caracteres);
 	return 0;
